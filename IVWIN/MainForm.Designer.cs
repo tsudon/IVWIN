@@ -26,32 +26,53 @@ namespace IVWIN
 
 
 
-        //image browser option
-        LoadOption loadOption;
-
-
         /// <summary>
         /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent()
         {
+            this.IVWImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.IVWImage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // IVWImage
+            // 
+            this.IVWImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IVWImage.Location = new System.Drawing.Point(0, 0);
+            this.IVWImage.Margin = new System.Windows.Forms.Padding(0);
+            this.IVWImage.Name = "IVWImage";
+            this.IVWImage.Size = new System.Drawing.Size(784, 561);
+            this.IVWImage.TabIndex = 0;
+            this.IVWImage.TabStop = false;
+            this.IVWImage.Click += new System.EventHandler(this.IVWImage_Click);
+            this.IVWImage.DoubleClick += new System.EventHandler(this.IVWImage_DoubleClick);
+            this.IVWImage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseDown);
+            this.IVWImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseMove);
+            this.IVWImage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseUp);
             // 
             // IVWIN
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(803, 480);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.IVWImage);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "IVWIN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IVWIN";
             this.Load += new System.EventHandler(this.IVWIN_Load);
+            this.SizeChanged += new System.EventHandler(this.IVWIN_SizeChanged);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.IVWIN_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.IVWIN_DragEnter);
+            ((System.ComponentModel.ISupportInitialize)(this.IVWImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -61,6 +82,8 @@ namespace IVWIN
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox IVWImage;
     }
 }
 

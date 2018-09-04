@@ -8,7 +8,7 @@ namespace IVWIN
     {
         static public void write (String str)
         {
-            Console.WriteLine(str);
+//           Console.WriteLine(str);
         }
     }
 }

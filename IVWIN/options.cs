@@ -15,7 +15,7 @@ public class LoadOption
 	{
 	}
 
-    public boolean mangaModeFLag = false;
+    public bool mangaModeFLag = false;
     public DrawMode drawMode = DrawMode.DEFALT;
 
 
