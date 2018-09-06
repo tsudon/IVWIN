@@ -38,17 +38,16 @@ namespace IVWIN
             // 
             // IVWImage
             // 
-            this.IVWImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IVWImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IVWImage.Location = new System.Drawing.Point(0, 0);
             this.IVWImage.Margin = new System.Windows.Forms.Padding(0);
             this.IVWImage.Name = "IVWImage";
             this.IVWImage.Size = new System.Drawing.Size(784, 561);
             this.IVWImage.TabIndex = 0;
             this.IVWImage.TabStop = false;
-            this.IVWImage.Click += new System.EventHandler(this.IVWImage_Click);
-            this.IVWImage.DoubleClick += new System.EventHandler(this.IVWImage_DoubleClick);
+            this.IVWImage.WaitOnLoad = true;
+            this.IVWImage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IVWImage_Click);
+            this.IVWImage.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseDoubleClick);
             this.IVWImage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseDown);
             this.IVWImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseMove);
             this.IVWImage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.IVWImage_MouseUp);
